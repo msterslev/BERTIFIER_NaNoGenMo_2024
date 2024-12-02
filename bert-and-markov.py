@@ -1,3 +1,13 @@
+# BERTIFIER adaptation for NaNoGenMo 2024
+# By Malthe Stavning Erslev
+# 
+# See description below (or README file) for overview of code functionality.
+#
+# This project is part of a larger research project, BERTIFIER, which focuses on practice-based ways to perform digital media archaeoloy of langujage models, particularly BERT.
+#
+# Licensed under Apache 2.0, see LICENSE file.
+#
+
 import random
 import re
 import torch
