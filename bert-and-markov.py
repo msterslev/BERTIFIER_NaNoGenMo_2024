@@ -343,7 +343,7 @@ with open(file_title + ".md", "w", encoding='utf-8') as f:
         first_markov_output = None  # Initialize to store the first Markov output
 
         while section_words < section_length:
-            print(f"\n--- Generating dialogue {dialogue_counter} ---")
+            print(f"\n--- Generating dialogue {dialogue_counter} | Total words so far: {total_words}---")
             num_sentences = random.randint(1, 5)
             markov_outputs = []
             for _ in range(num_sentences):
@@ -358,10 +358,13 @@ with open(file_title + ".md", "w", encoding='utf-8') as f:
                 first_markov_output = combined_markov_output  # Store the first Markov output
             print(f"Markov Output:\n{combined_markov_output}\n")
             f.write(f"**Markov**:\n{combined_markov_output}\n\n")
+            total_words += len(combined_markov_output.split())
+            print(f"Total words after MARKOV: {total_words}")
             bertified_output = bertify_long_text(combined_markov_output)
             print(f"BERTIFIED Output:\n{bertified_output}\n")
             f.write(f"**Bert**:\n{bertified_output}\n\n")
             total_words += len(bertified_output.split())
+            print(f"Total words after BERT: {total_words}")
             dialogue_counter += 1
 
             # Add this line to accumulate BERT outputs
@@ -394,11 +397,14 @@ with open(file_title + ".md", "w", encoding='utf-8') as f:
         if first_markov_output is None:
             first_markov_output = combined_markov_output  # Store the first Markov output
         print(f"Markov Output:\n{combined_markov_output}\n")
-        f.write(f"**MARKOV**:\n{combined_markov_output}\n\n")
+        f.write(f"**Markov**:\n{combined_markov_output}\n\n")
+        total_words += len(combined_markov_output.split())
+        print(f"Total words after MARKOV: {total_words}")
         bertified_output = bertify_long_text(combined_markov_output)
         print(f"BERTIFIED Output:\n{bertified_output}\n")
-        f.write(f"**BERTIFIER**:\n{bertified_output}\n\n")
+        f.write(f"**Bert**:\n{bertified_output}\n\n")
         total_words += len(bertified_output.split())
+        print(f"Total words after BERT: {total_words}")
         dialogue_counter += 1
 
         # Add this line to accumulate BERT outputs
