@@ -1,18 +1,47 @@
-# When Bert met Markov: Mirrors Reflect Differently
+---
+documentclass: book
+classoption: oneside
+fontsize: 11pt
+title: "When Bert met Markov"
+subtitle: "Mirrors Reflect Differently"
+author: "Malthe Stavning Erslev"
+header-includes: |
+   \usepackage{xurl}
+   \usepackage{hyperref}
+   \hypersetup{breaklinks=true, urlcolor=blue, linkcolor=blue}
+   \usepackage{emptypage}
+   \usepackage{fancyhdr}
+   \pagestyle{fancy}
+   \fancyhf{}
+   \fancyhead[L]{\textbf{WHEN BERT MET MARKOV}}
+   \fancyhead[R]{\leftmark}
+   \fancyfoot[C]{\thepage}
+   \renewcommand{\UrlFont}{\small\ttfamily}
+---
+
+# BERTIFIER adaptation for NaNoGenMo 2024
+\thispagestyle{empty}
 
 This is a digital media archaeological exploration of AI-generated text, combining two distinct text generation techniques, both of which predate the ChatGPT moment and neither of which are state of the art. Markov Chains and the BERT language model are here combined to create a series of stylistically varied sections that explore the materiality of two different kinds of language models through their mutual probabilistic modeling of a series of datasets – and of one another. The project is divided into four parts, each shaped by a different dataset: everyday conversations, cinematic dialogue, therapeutic interactions, and a recursive corpus of the book’s own outputs. These datasets inform the tone and content of each section. See details below regarding the source of each of the first three datasets. The fourth (recursive) dataset consists of all the outputs from the *BERTifier* (see below) generated during the first three sections of the book.
 
 The text-generation process unfolds in two stages. First, a Markov Chain algorithm constructs an initial sentence by analyzing the chosen dataset and probabilistically predicting word sequences based on observed patterns. This rudimentary output serves as the foundation. The second stage employs a function called the *BERTifier,* which uses BERT, a pre-trained deep learning language model, to refine the sentence. The *BERTifier* iterates through each word in the sequence, masking and replacing it with the word that BERT predicts to be most contextually appropriate. This iterative process repeats until the sentence stabilizes, meaning no further changes are predicted by BERT. The *BERTifier's* functionality is exemplified in the appendix.
 
 **Datasets and models used:**
-- DailyDialog Dataset: https://huggingface.co/datasets/li2017dailydialog/daily_dialog
-- Cornell Movie Dialogs Corpus: https://www.cs.cornell.edu/~cristian/Chameleons_in_imagined_conversations.html
-- ELIZA Script (edited for the purposes of this book): https://github.com/codeanticode/eliza
-- BERT base model (cased): https://huggingface.co/google-bert/bert-base-cased
+
+- DailyDialog Dataset: \url{https://huggingface.co/datasets/li2017dailydialog/daily_dialog}
+
+- Cornell Movie Dialogs Corpus: \url{https://www.cs.cornell.edu/~cristian/Chameleons\_in\_imagined\_conversations.html}
+
+- ELIZA Script (edited for the purposes of this book): \url{https://github.com/codeanticode/eliza}
+
+- BERT base model (cased): \url{https://huggingface.co/google-bert/bert-base-cased}
+
 - ChatGPT (gpt-4o-2024-08-06 and o1-preview-2024-09-12), used for code development and for writing the text above.
 
+_This project is part of a larger research project, BERTIFIER, which focuses on practice-based ways to perform digital media archaeoloy of langujage models, particularly BERT._
 
-## Section 1: Quotidian
+\chapter{Section 1: Quotidian}
+\thispagestyle{empty}
 
 **Markov**:
 Let's make ready, you can find it quiet. Making coffee is often over 40 ° C.
@@ -1796,7 +1825,8 @@ I haven't been drinking tonight. That's fine, still a major avalanche was report
 **Bert**:
 I haven't been here long. It's strange, like a giant avalanche somewhere off in the distance. No. Something's wrong. It'll be a while. Where have you been? Have you responded to Mom's call?
 
-## Section 2: Epic
+\chapter{Section 2: Epic}
+\thispagestyle{empty}
 
 **Markov**:
 Would I? Put all that matters now. Yes.. He told you that.
@@ -3826,7 +3856,8 @@ Rodeo Drive. Marla, should be over a really real! So how come I'm allowed to par
 **Bert**:
 Grab it. Teddie, can you do this for me? For me? I'm going to do it in the living room, and you'll think I'm just enjoying the sight of you, Mr. Vandenberg.
 
-## Section 3: Therapeutic
+\chapter{Section 3: Therapeutic}
+\thispagestyle{empty}
 
 **Markov**:
 Could here really be some connection? Can you elaborate on that? Would you want to be quite positive. Perhaps in your fantasies we are each other. What about machines worrys you?
@@ -6018,7 +6049,8 @@ What do you mention computers? I'm sure it's not pleasant to be me. What other c
 **Bert**:
 How can you do that? I'm afraid it's not possible to help you. What other way do you think you can help me? Can I help you help me?
 
-## Section 4: Recursive
+\chapter{Section 4: Recursive}
+\thispagestyle{empty}
 
 **Markov**:
 Do you think it matters? Don't even think about looking in the living room, so why wouldn't they? No, no. I don't know. It's not so sure.
@@ -7970,9 +8002,11 @@ S - S - S - S - S - S - S - S - S - I'm going to say that you are? I'll take you
 **Bert**:
 S - S - S - S - S - S - S - S - S - I'm going to see how you are. I'll take you to the next week's football game.
 
-## Appendix: Unraveling BERTifier
+\chapter{Appendix: Unraveling BERTifier}
+\renewcommand{\leftmark}{APPENDIX}
+\thispagestyle{empty}
 
-### Example from Section: Quotidian
+# Example from Section: Quotidian
 
 **Initial Markov Output:**
 Let's make ready, you can find it quiet. Making coffee is often over 40 ° C.
@@ -8150,9 +8184,7 @@ Let ' s get warm so we can get really warm . The temperature is just over 30 deg
 **Final Stabilized Output:**
 Let's get warm so we can get really warm. The temperature is just over 30 degrees C.
 
-## Appendix: Unraveling BERTifier
-
-### Example from Section: Epic
+# Example from Section: Epic
 
 **Initial Markov Output:**
 Would I? Put all that matters now. Yes.. He told you that.
@@ -8536,9 +8568,7 @@ And you know I love you , he said . Yes , I know you do [.]
 **Final Stabilized Output:**
 And you know I love you, he said. Yes, I know you do.
 
-## Appendix: Unraveling BERTifier
-
-### Example from Section: Therapeutic
+# Example from Section: Therapeutic
 
 **Initial Markov Output:**
 Could here really be some connection? Can you elaborate on that? Would you want to be quite positive. Perhaps in your fantasies we are each other. What about machines worrys you?
@@ -8918,9 +8948,7 @@ Could there really be a difference ? Can you focus on something ? Maybe you need
 **Final Stabilized Output:**
 Could there really be a difference? Can you focus on something? Maybe you need to be more focused. Maybe in some ways we understand each other. Still, it bothers me.
 
-## Appendix: Unraveling BERTifier
-
-### Example from Section: Recursive
+# Example from Section: Recursive
 
 **Initial Markov Output:**
 Do you think it matters? Don't even think about looking in the living room, so why wouldn't they? No, no. I don't know. It's not so sure.

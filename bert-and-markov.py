@@ -30,7 +30,7 @@ The text-generation process unfolds in two stages. First, a Markov Chain algorit
 - ChatGPT (gpt-4o-2024-08-06 and o1-preview-2024-09-12), used for code development and for writing the text above.
 """
 
-target_length = 1000
+target_length = 50000
 corpus_sources = {
     'daily_dialog_corpus.txt': './daily_dialog_corpus.txt',
     'movie_dialogs_corpus.txt': './movie_dialogs_corpus.txt',

@@ -8,13 +8,13 @@ The text-generation process unfolds in two stages. First, a Markov Chain algorit
 
 **Datasets and models used:**
 
-- DailyDialog Dataset: https://huggingface.co/datasets/li2017dailydialog/daily\_dialog
+- DailyDialog Dataset: \url{https://huggingface.co/datasets/li2017dailydialog/daily_dialog}
 
-- Cornell Movie Dialogs Corpus: https://www.cs.cornell.edu/~cristian/Chameleons\_in\_imagined\_conversations.html
+- Cornell Movie Dialogs Corpus: \url{https://www.cs.cornell.edu/~cristian/Chameleons\_in\_imagined\_conversations.html}
 
-- ELIZA Script (edited for the purposes of this book): https://github.com/codeanticode/eliza
+- ELIZA Script (edited for the purposes of this book): \url{https://github.com/codeanticode/eliza}
 
-- BERT base model (cased): https://huggingface.co/google-bert/bert-base-cased
+- BERT base model (cased): \url{https://huggingface.co/google-bert/bert-base-cased}
 
 - ChatGPT (gpt-4o-2024-08-06 and o1-preview-2024-09-12), used for code development and for writing the text above.
 
