@@ -1,0 +1,11 @@
+create_corpus
+backup_last-working-version.py
+bert-and-markov_backup.py
+TEST_When_Bert_met_Markov.md
+bertifier_from-middle.py
+elizacorpus_When_Markov_was_BERTified_or_Mirrors_Mirroring_Differently.md
+eliza_script.txt
+initial_prompt.txt
+movie_lines.txt
+test_When_Markov_was_BERTified_or_Mirrors_Mirroring_Differently.md
+When_Markov_was_BERTified_or_Mirrors_Mirroring_Differently.md
