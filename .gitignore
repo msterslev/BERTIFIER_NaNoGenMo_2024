@@ -1,4 +1,4 @@
-create_corpus
+cornell_movie_dialogs_corpus/
 backup_last-working-version.py
 bert-and-markov_backup.py
 TEST_When_Bert_met_Markov.md
