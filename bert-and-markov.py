@@ -30,7 +30,7 @@ The text-generation process unfolds in two stages. First, a Markov Chain algorit
 - ChatGPT (gpt-4o-2024-08-06 and o1-preview-2024-09-12), used for code development and for writing the text above.
 """
 
-target_length = 50000
+target_length = 1000
 corpus_sources = {
     'daily_dialog_corpus.txt': './daily_dialog_corpus.txt',
     'movie_dialogs_corpus.txt': './movie_dialogs_corpus.txt',
@@ -349,20 +349,18 @@ with open(file_title + ".md", "w", encoding='utf-8') as f:
             for _ in range(num_sentences):
                 markov_output = markov_chain.generate_sentence()
                 markov_outputs.append(markov_output)
-                section_words += len(markov_output.split())
-                # Break if section words exceed limit
-                if section_words >= section_length:
-                    break
             combined_markov_output = ' '.join(markov_outputs)
             if first_markov_output is None:
                 first_markov_output = combined_markov_output  # Store the first Markov output
             print(f"Markov Output:\n{combined_markov_output}\n")
             f.write(f"**Markov**:\n{combined_markov_output}\n\n")
+            section_words += len(combined_markov_output.split())
             total_words += len(combined_markov_output.split())
             print(f"Total words after MARKOV: {total_words}")
             bertified_output = bertify_long_text(combined_markov_output)
             print(f"BERTIFIED Output:\n{bertified_output}\n")
             f.write(f"**Bert**:\n{bertified_output}\n\n")
+            section_words += len(bertified_output.split())
             total_words += len(bertified_output.split())
             print(f"Total words after BERT: {total_words}")
             dialogue_counter += 1
